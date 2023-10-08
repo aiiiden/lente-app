@@ -1,6 +1,5 @@
 "use server";
 
-import Image from "next/image";
 import LoginForm from "@/app/(auth)/components/login-form";
 import LoginCard from "@/app/(auth)/components/login-card";
 import GateHeader from "./components/gate-header";
