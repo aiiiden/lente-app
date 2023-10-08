@@ -1,13 +1,13 @@
-import { cn } from "@/lib/utils";
-import "./globals.css";
+import "@/app/globals.css";
+import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 
 import localFont from "next/font/local";
 
 const pretendardFront = localFont({
-  src: "./fonts/PretendardVariable.woff2",
+  src: "../fonts/PretendardVariable.woff2",
   display: "block",
-  // preload: true,
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={pretendardFront.className}>{children}</body>
+      <body className={pretendardFront.className}>
+        <main>{children}</main>
+        <Toaster />
+      </body>
     </html>
   );
 }
