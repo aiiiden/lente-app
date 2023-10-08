@@ -23,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendardFront.className}>
-        <main>{children}</main>
+        <main className="w-screen overflow-x-auto">
+          <div className="min-w-[360px]">{children}</div>
+        </main>
         <Toaster />
       </body>
     </html>

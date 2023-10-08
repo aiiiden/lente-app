@@ -3,13 +3,13 @@
 import { cn } from "@/lib/utils";
 import { ComponentProps } from "react";
 
-export default function GateYoutube({
-  className,
-}: Omit<ComponentProps<"div">, "children">) {
+type GateYoutubeProps = Omit<ComponentProps<"div">, "children">;
+
+export default function GateYoutube({ className }: GateYoutubeProps) {
   return (
     <div
       className={cn(
-        "rounded-xl overflow-hidden shadow-xl w-full mx-2 bg-primary/30",
+        "relative rounded-xl overflow-hidden w-full mx-2 bg-primary/30",
         className
       )}
     >
